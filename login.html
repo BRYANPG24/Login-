@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registro de Entrada y Salida</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  form {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #ff0000; /* Color rojo */
+    margin-bottom: 20px;
+  }
+  
+  fieldset {
+    border: none;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"],
+  input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: #45a049;
+  }
+  
+  #logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 9999; /* Asegura que el logo esté encima del contenido */
+  }
+  
+  #logo img {
+    max-width: 250px;
+  }
+  
+  .texto-reservado {
+    position: absolute;
+    top: 10px;
+    left: 120px; /* Ajusta el espacio reservado según el tamaño de tu logo */
+  }
+</style>
+</head>
+<body>
+
+<div id="logo">
+ 
+</div>
+
+<div class="texto-reservado">
+  <!-- Espacio reservado para el texto "Universidad Laica Eloy Alfaro De Manabí" -->
+</div>
+
+<div>
+  <h1>Registro de Entrada y Salida</h1>
+  <form action="/registro" method="post">
+
+    <!-- Información Personal -->
+    <fieldset>
+      <legend>Información Personal</legend>
+      <label for="nombre">Nombre completo:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br>
+      
+      <label for="puesto">Puesto de trabajo:</label><br>
+      <input type="text" id="puesto" name="puesto" required><br>
+    </fieldset>
+
+    <!-- Registro de Entrada -->
+    <fieldset>
+      <legend>Registro de Entrada</legend>
+      <label for="fecha_entrada">Fecha:</label><br>
+      <input type="date" id="fecha_entrada" name="fecha_entrada" required><br>
+      
+      <label for="hora_entrada">Hora:</label><br>
+      <input type="time" id="hora_entrada" name="hora_entrada" required><br>
+    </fieldset>
+
+    <!-- Registro de Salida -->
+    <fieldset>
+      <legend>Registro de Salida</legend>
+      <label for="fecha_salida">Fecha:</label><br>
+      <input type="date" id="fecha_salida" name="fecha_salida"><br>
+      
+      <label for="hora_salida">Hora:</label><br>
+      <input type="time" id="hora_salida" name="hora_salida"><br>
+    </fieldset>
+
+    <!-- Botones -->
+    <input type="submit" value="Registrar Entrada/Salida">
+    <input type="reset" value="Limpiar">
+  </form>
+</div>
+
+</body>
+</html>
